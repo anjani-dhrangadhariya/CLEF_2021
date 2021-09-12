@@ -1,19 +1,3 @@
-Dear LLNCS user,
+## End-to-end Fine-grained Neural Entity Recognition of Patients, Interventions, Outcomes
 
-The files in this directory belong to the LaTeX2e package for
-Lecture Notes in Computer Science (LNCS) of Springer-Verlag.
-
-It consists of the following files:
-
-  readme.txt         this file
-
-  history.txt        the version history of the package
-
-  llncs.cls          the LaTeX2e document class
-
-  samplepaper.tex    a sample paper
-  fig1.eps           a figure used in the sample paper
-
-  llncsdoc.pdf       the documentation of the class (PDF version)
-
-  splncs04.bst       current LNCS BibTeX style with alphabetic sorting
+PICO recognition is an information extraction task for detecting parts of text describing Participant (P), Intervention (I), Comparator (C), and Outcome (O) (PICO elements) in clinical trial literature. Each PICO description is further decomposed into finer semantic units. For example, in the sentence `The study involved 242 adult men with back pain.', the phrase `242 adult men with back pain' describes the participant, but this coarse-grained description is further divided into finer semantic units. The term `242' shows ``sample size'' of the participants, `adult' shows ``age'', `men' shows ``sex'', and `back pain' show the participant ``condition''. Recognizing these fine-grained PICO entities in health literature is a challenging named-entity recognition (NER) task but it can help to fully automate systematic reviews (SR). Previous approaches concentrated on coarse-grained PICO recognition but focus on the fine-grained recognition still lacks. We revisit the previously unfruitful neural approaches to improve recognition performance for the fine-grained entities. In this paper, we test the feasibility and quality of multitask learning (MTL) to improve fine-grained PICO recognition using a related auxiliary task and compare it with single-task learning (STL). As a consequence, our end-to-end neural approach improves the state-of-the-art (SOTA) F1 score from 0.45 to 0.54 for the ``participant'' entity and from 0.48 to 0.57 for the ``outcome'' entity without any handcrafted features. We inspect the models to identify where they fail and how some of these failures are linked to the current benchmark data.
